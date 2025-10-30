@@ -91,6 +91,7 @@ textarea {
 
 #show{
     background-color: red;
-    margin-left: 300px ;
+    display: block;
+    margin: auto;
     color: #fff;
 }
