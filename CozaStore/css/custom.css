@@ -1,0 +1,96 @@
+
+.sec-banner {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 50px 0;
+}
+
+
+.container1, .container2, .container3 {
+    position: relative;
+    text-align: left;
+}
+
+
+.container1 img, .container2 img, .container3 img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.text1, .text2, .text3 {
+    position: absolute;
+    bottom: 130px;
+    left: 0px;
+    color: black;
+}
+
+.text1 h1, .text2 h1, .text3 h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.text1 p, .text2 p, .text3 p {
+    font-size: 20px;
+}
+
+#contact-section {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    width: 420px;
+}
+
+#contact-section h2 {
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    text-align: left;
+}
+
+textarea {
+    resize: none;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+#contact-submit {
+    width: 100%;
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#show{
+    background-color: red;
+    margin-left: 300px ;
+    color: #fff;
+}
