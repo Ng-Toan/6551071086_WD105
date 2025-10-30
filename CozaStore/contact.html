@@ -351,9 +351,9 @@
 
 							<div class="form-group">
 								<label>Message Type:</label>
-								<input type="radio" name="contact-type" value="Feedback" class="mot" checked>
+								<input type="radio" name="contact-type" value="Feedback" checked>
 									Feedback<br>
-								<input type="radio" name="contact-type" value="Support" class="mot"> Support<br>
+								<input type="radio" name="contact-type" value="Support"> Support<br>
 								<input type="radio" name="contact-type" value="Other"> Other
 							</div>
 
@@ -378,7 +378,41 @@
 						</form>
 					</section>
 				</div>
+				<script>
+					document.addEventListener("DOMContentLoaded", function () {
+				const form = document.getElementById("contact-form");
+				const nameInput = document.getElementById("contact-name");
+				const emailInput = document.getElementById("contact-email");
+				const subjectSelect = document.getElementById("contact-subject");
+				const messageInput = document.getElementById("contact-message");
+				const errorBox = document.getElementById("contact-error");
 
+				form.addEventListener("submit", function (e) {
+					e.preventDefault();
+
+					let name = nameInput.value.trim();
+					let email = emailInput.value.trim();
+					let subject = subjectSelect.value;
+					let message = messageInput.value.trim();
+					let error = "";
+
+					if (name === "" || email === "" || subject === "" || message === "") {
+						error = "Please fill in all required fields.";
+					}
+					else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+						error = "Invalid email format.";
+					}
+
+					if (error !== "") {
+						errorBox.textContent = error;
+					} else {
+						errorBox.textContent = "";
+						alert("Form submitted successfully!");
+						form.reset();
+					}
+				});
+			});
+				</script>
 				<div class="size-210 bor10 flex-w flex-col-m p-lr-93 p-tb-30 p-lr-15-lg w-full-md">
 					<div class="flex-w w-full p-b-42">
 						<span class="fs-18 cl5 txt-center size-211">
